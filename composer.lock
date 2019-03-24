@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbc2339428d2cba63ae32aabd24fb6a4",
+    "content-hash": "3fb3b0fc6f78cc5ec80811de923f01d8",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1062,16 +1062,16 @@
         },
         {
             "name": "phpactor/completion-worse-extension",
-            "version": "0.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpactor/completion-worse-extension.git",
-                "reference": "3d1b510b7af4573b453d13d912236b3fdefcc7f5"
+                "reference": "6e771deefabf9bd6d6cfcd4e6d32e1b1b72556b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpactor/completion-worse-extension/zipball/3d1b510b7af4573b453d13d912236b3fdefcc7f5",
-                "reference": "3d1b510b7af4573b453d13d912236b3fdefcc7f5",
+                "url": "https://api.github.com/repos/phpactor/completion-worse-extension/zipball/6e771deefabf9bd6d6cfcd4e6d32e1b1b72556b0",
+                "reference": "6e771deefabf9bd6d6cfcd4e6d32e1b1b72556b0",
                 "shasum": ""
             },
             "require": {
@@ -1107,7 +1107,7 @@
                 }
             ],
             "description": "Collection of completors based on Worse Reflection and the Tolerant PHP Parser",
-            "time": "2019-01-12T17:07:59+00:00"
+            "time": "2019-03-24T14:27:31+00:00"
         },
         {
             "name": "phpactor/composer-autoloader-extension",
@@ -1596,11 +1596,7 @@
                     "Phpactor\\ClassFileConverter\\": "lib/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Phpactor\\ClassFileConverter\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1611,10 +1607,6 @@
                 }
             ],
             "description": "Utility for navigating to related source files",
-            "support": {
-                "source": "https://github.com/phpactor/path-finder/tree/master",
-                "issues": "https://github.com/phpactor/path-finder/issues"
-            },
             "time": "2017-11-04T12:57:48+00:00"
         },
         {
