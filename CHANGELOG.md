@@ -1,7 +1,7 @@
 Changelog
 =========
 
-## develop
+## 2019-03-03 0.12.0
 
 BC Break:
 
@@ -46,6 +46,11 @@ Bug fixes:
   - [code-transform] Extract method sometimes creates method in new class in
     same file #730
   - [code-transform] Add Missing Properties added trait props in new class #726
+
+## 2018-12-21 0.11.1
+
+  - [application] Resolve the vendor directory correctly when Phpactor
+    included as a dependency, thanks @kermorgant
 
 ## 2018-12-02 0.11.0
 
