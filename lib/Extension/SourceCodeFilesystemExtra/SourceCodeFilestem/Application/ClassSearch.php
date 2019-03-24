@@ -42,9 +42,7 @@ class ClassSearch
 
         $results = [];
 
-        if ($reflectionResult = $this->tryAndReflect($name)) {
-            $results[] = $reflectionResult;
-        }
+        $results = $this->builtInResults($results, $name);
 
         foreach ($files as $file) {
             if (isset($results[(string) $file->path()])) {
@@ -70,6 +68,38 @@ class ClassSearch
         }
 
         return array_values($results);
+    }
+
+    private function builtInResults(array $results, string $name)
+    {
+        $declared = array_merge(
+            get_declared_classes(),
+            get_declared_traits(),
+            get_declared_interfaces()
+        );
+
+        foreach ($declared as $declaredClass) {
+            $offset = strrpos($declaredClass, '\\');
+            if (false === $offset) {
+                $short = $declaredClass;
+            } else {
+                $short = substr($declaredClass, $offset + 1);
+            }
+
+            $namespace = substr($declaredClass, 0, strrpos($declaredClass, '\\'));
+
+            if ($name !== $short) {
+                continue;
+            }
+
+            if (!$this->tryAndReflect($name)) {
+                continue;
+            }
+
+            $results[] = $this->tryAndReflect($name);
+        }
+
+        return $results;
     }
 
     private function tryAndReflect(string $name)
