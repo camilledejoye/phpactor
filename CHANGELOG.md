@@ -1,6 +1,12 @@
 Changelog
 =========
 
+## develop
+
+  - [completion] Use declared classes as completion source
+  - [import-class] Import declared classes (as long as they can be statically
+    resolved).
+
 ## 2019-03-03 0.12.0
 
 BC Break:
